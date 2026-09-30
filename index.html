@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>조직문화 가이드 V3 — 우리다움을 만들어내는 4가지 사람</title>
+<meta name="description" content="모두가 나답게 살아갈 수 있는 세상을 위해 '우리다움'을 만들어내는 4가지 사람 — 조직문화 가이드 개정 V3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+@font-face{
+font-family:'Yangjin';
+src:url('https://fastly.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
+font-weight:normal;font-style:normal;font-display:swap;
+}
+:root{
+--green:#0E6B45;
+--green-deep:#0A5537;
+--green-tint:#E7EEE4;
+--ink:#22201A;
+--ink-soft:#57534A;
+--paper:#FCFBF4;
+--cream:#F2EDDD;
+--beige:#EAE3CB;
+--line:#C4B996;
+--hairline:#DCD3B8;
+--red:#C43B2C;
+--nav-h:52px;
+--org-navy:#1B1C30;
+--org-purple:#7A7EDC;
+--org-green:#3EA45B;
+--org-blue:#2E9BE8;
+--org-orange:#F4551E;
+--serif:'Noto Sans KR','Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+--sans:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+--disp:'Yangjin','Noto Sans KR',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 16px)}
+@media (prefers-reduced-motion: reduce){
+html{scroll-behavior:auto}
+*,*::before,*::after{animation:none!important;transition:none!important}
+}
+body{
+font-family:var(--serif);
+background:var(--cream);
+color:var(--ink);
+line-height:1.85;
+font-size:15.5px;
+word-break:keep-all;
+-webkit-text-size-adjust:100%;
+}
+a{color:var(--green)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+/* ---------- 문서 종이 ---------- */
+.sheet{
+max-width:840px;margin:0 auto;
+background:var(--paper);
+border-left:1px solid var(--line);
+border-right:1px solid var(--line);
+min-height:100vh;
+overflow-x:hidden;
+}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+section{scroll-margin-top:calc(var(--nav-h) + 12px)}
+/* ---------- 상단 내비게이션 ---------- */
+.topbar{
+position:sticky;top:0;z-index:50;
+background:var(--green);
+box-shadow:0 2px 10px rgba(14,107,69,.28);
+}
+.topbar-in{
+max-width:840px;margin:0 auto;
+display:flex;align-items:center;gap:10px;
+height:var(--nav-h);padding:0 14px;
+}
+.topbar .brand{
+font-family:var(--disp);font-weight:normal;
+color:#F6F2DF;font-size:17px;letter-spacing:.02em;
+white-space:nowrap;text-decoration:none;
+display:flex;align-items:center;gap:8px;
+}
+.badge-v{
+font-family:var(--sans);font-weight:800;font-size:11px;
+background:#F6F2DF;color:var(--green);
+border:0;border-radius:20px;padding:2px 8px;letter-spacing:.04em;
+}
+.nav-scroll{
+margin-left:auto;display:flex;gap:6px;overflow-x:auto;
+-webkit-overflow-scrolling:touch;scrollbar-width:none;
+padding:4px 2px;align-self:center;
+}
+.nav-scroll::-webkit-scrollbar{display:none}
+.nav-chip{
+flex:0 0 auto;text-decoration:none;display:flex;align-items:center;
+font-family:var(--sans);font-size:13px;font-weight:700;color:#DCEAD9;
+background:rgba(255,255,255,.10);
+border:1px solid rgba(255,255,255,.22);
+padding:5px 11px;border-radius:20px;line-height:1;
+white-space:nowrap;transition:background .15s,color .15s;
+}
+.nav-chip:hover{background:rgba(255,255,255,.22)}
+.nav-chip.active{background:#F6F2DF;color:var(--green);border-color:#F6F2DF}
+/* ---------- 히어로 (표지) ---------- */
+.cover{
+background:var(--green);
+color:#F6F2DF;
+padding:48px 0 44px;
+border-bottom:1px solid var(--green-deep);
+}
+.cover .eyebrow{
+font-family:var(--sans);font-weight:700;font-size:14px;
+letter-spacing:.06em;color:#CFE3C9;margin-bottom:14px;
+}
+.cover-title{
+font-family:var(--disp);font-weight:normal;
+font-size:clamp(24px,5.6vw,40px);
+line-height:1.42;letter-spacing:.01em;
+}
+.cover-title .hl{
+background:#F6F2DF;color:var(--green);
+padding:1px 10px 3px;border-radius:4px;
+display:inline-block;
+}
+.cover-sub{
+margin-top:18px;font-size:14px;color:#BBD8B4;font-weight:600;
+font-family:var(--sans);
+}
+/* ---------- 표지 강령 개요 ---------- */
+.cover-outline{padding:26px 0 8px}
+.ol-head{
+display:flex;align-items:center;gap:0;
+border:1px solid var(--line);
+margin-top:16px;
+background:var(--beige);
+}
+.ol-head .letter{
+font-family:var(--disp);font-weight:normal;
+width:40px;align-self:stretch;display:flex;align-items:center;justify-content:center;
+background:var(--green);color:var(--paper);font-size:17px;
+}
+.ol-head .ol-t{
+font-family:var(--disp);font-weight:normal;font-size:16.5px;color:var(--green-deep);
+padding:7px 13px;
+}
+.ol-list{list-style:none;margin:6px 0 0;padding:0 2px}
+.ol-list li{padding:7px 0;border-bottom:1px dotted var(--hairline)}
+.ol-list li:last-child{border-bottom:0}
+.ol-list a{text-decoration:none;color:inherit;display:block}
+.ol-list b{
+display:block;font-weight:900;font-size:15.5px;
+}
+.ol-list a:hover b{color:var(--green-deep);text-decoration:underline;text-underline-offset:3px}
+.ol-list span{display:block;font-size:13.5px;color:var(--ink-soft);margin-top:1px}
+/* ---------- 목차 ---------- */
+.toc{padding:34px 0 8px}
+.toc h2,.org h2{
+font-family:var(--disp);font-weight:normal;
+font-size:21px;color:var(--ink);
+text-align:center;letter-spacing:.3em;text-indent:.3em;
+border-top:3px double var(--ink);
+border-bottom:3px double var(--ink);
+padding:8px 0;margin-bottom:6px;
+}
+.toc-note{
+text-align:center;font-size:12.5px;color:var(--ink-soft);margin:8px 0 12px;
+}
+.toc-grid{display:block}
+.toc-box{margin-top:14px}
+.toc-box .tb-head{
+display:flex;align-items:center;gap:10px;
+font-family:var(--serif);font-weight:900;font-size:15.5px;color:var(--green-deep);
+border-bottom:2px solid var(--green);
+padding-bottom:5px;
+}
+.toc-box .tb-head .letter{
+font-family:var(--serif);font-weight:900;
+width:24px;height:24px;display:flex;align-items:center;justify-content:center;
+background:var(--green);color:var(--paper);font-size:13px;
+}
+.toc-box a{
+display:flex;align-items:baseline;gap:8px;
+padding:7px 2px 6px;text-decoration:none;color:var(--ink);
+font-weight:700;font-size:14.5px;
+border-bottom:1px solid transparent;
+}
+.toc-box a:hover{color:var(--green-deep)}
+.toc-box a::after{
+content:"";flex:1;
+border-bottom:2px dotted var(--line);
+transform:translateY(-3px);
+}
+.toc-box a .pg{
+color:var(--ink-soft);font-weight:700;font-size:13px;
+font-variant-numeric:tabular-nums;order:3;
+}
+/* ---------- 간지 (부 표제) ---------- */
+.divider{
+background:var(--green);
+margin-top:44px;
+padding:38px 0;
+text-align:center;
+border-top:1px solid var(--green-deep);
+border-bottom:1px solid var(--green-deep);
+}
+.divider h2{
+font-family:var(--disp);font-weight:normal;
+color:var(--paper);
+font-size:clamp(22px,4.8vw,30px);
+letter-spacing:.06em;
+}
+.divider h2::before,.divider h2::after{
+content:"";display:block;width:56px;margin:0 auto;
+border-top:1px solid rgba(252,251,244,.55);
+}
+.divider h2::before{margin-bottom:14px}
+.divider h2::after{margin-top:14px}
+/* ---------- 본문 ---------- */
+.article{padding:8px 0 8px}
+.principle{margin-top:38px}
+.principle .big{
+font-family:var(--disp);font-weight:normal;
+color:var(--green-deep);
+font-size:clamp(20px,4.4vw,26px);
+line-height:1.5;
+}
+.principle .tagline{
+font-family:var(--serif);font-weight:600;
+color:var(--ink-soft);
+font-size:clamp(13.5px,3vw,15px);
+margin-top:4px;
+}
+.principle .rule{
+border-top:2px solid var(--green);
+border-bottom:1px solid var(--green);
+height:3px;
+margin:12px 0 4px;
+}
+.block{margin-top:18px}
+.block-label{
+display:block;
+font-family:var(--serif);font-weight:900;font-size:16px;color:var(--ink);
+}
+.block.mean .block-label{
+font-size:14.5px;color:var(--green-deep);
+}
+.block.mean .block-label::before{content:"■ ";font-size:10px;vertical-align:2px}
+.block .free{margin-top:4px;color:var(--ink);font-size:15px}
+.block ol,.block ul,.vote-card ol,.form-card ol{
+margin:6px 0 0;padding:0;list-style:none;counter-reset:num;
+}
+.block ol > li,.vote-card ol > li,.form-card ol > li{
+counter-increment:num;
+position:relative;
+padding:4px 0 4px 26px;
+font-size:15px;
+}
+.block ol > li::before,.vote-card ol > li::before,.form-card ol > li::before{
+content:counter(num) ".";
+position:absolute;left:4px;top:4px;
+font-weight:900;color:var(--ink);
+font-variant-numeric:tabular-nums;
+}
+.block ul > li{
+position:relative;padding:3px 0 3px 20px;font-size:15px;color:var(--ink);
+}
+.block ul > li::before{
+content:"·";position:absolute;left:6px;top:3px;font-weight:900;color:var(--ink);
+}
+.block.mean ul > li{color:var(--ink-soft);font-size:14.5px}
+.sub-note{
+margin:7px 0 2px;font-size:13.5px;color:var(--ink-soft);
+border-left:3px solid var(--line);
+background:var(--cream);
+padding:8px 12px;
+}
+.sub-note b{color:var(--ink)}
+li .inner{margin-top:3px;font-size:14px;color:var(--ink-soft)}
+li .inner p{padding:1px 0}
+li .inner .abc{font-weight:900;color:var(--green-deep);margin-right:5px}
+.warn-line{
+margin-top:16px;text-align:center;
+font-size:13.5px;font-weight:700;color:var(--ink-soft);
+border-top:1px solid var(--hairline);
+border-bottom:1px solid var(--hairline);
+padding:8px 10px;
+}
+.point-line{
+margin-top:10px;font-weight:900;font-size:14.5px;color:var(--green-deep);
+padding:9px 13px;background:var(--green-tint);
+border-left:3px solid var(--green);
+}
+/* ---------- 표 ---------- */
+.tbl-wrap{margin-top:18px}
+.tbl-title{
+text-align:center;font-weight:900;font-size:14.5px;margin-bottom:7px;color:var(--ink);
+font-family:var(--serif);
+}
+table{
+width:100%;border-collapse:collapse;
+background:#fff;
+font-size:14px;
+font-family:var(--serif);
+}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:center;vertical-align:middle}
+thead th{background:var(--beige);font-size:13px;font-weight:900;color:var(--ink)}
+td.cond{text-align:left;color:var(--ink-soft);font-size:13.5px}
+.tbl-cap{
+display:flex;justify-content:center;gap:12px;align-items:baseline;
+margin-top:6px;font-size:12px;color:var(--ink-soft);font-weight:600;
+font-family:var(--sans);
+}
+.grade{font-weight:900}
+.g1{color:#C0392B}.g2{color:#B07C10}.g3{color:#1E7A42}.g4{color:#6E3FA8}.g5{color:#2A5FB0}
+@media (max-width:560px){
+table.stack thead{display:none}
+table.stack,table.stack tbody,table.stack tr,table.stack td{display:block;width:100%}
+table.stack{border-top:1px solid var(--line)}
+table.stack tr{
+background:#fff;border:1px solid var(--line);border-top:0;
+margin-top:10px;
+}
+table.stack tr:first-child{margin-top:0}
+table.stack td{border:0;border-top:1px dotted var(--hairline);text-align:left;
+display:flex;gap:10px;align-items:baseline;padding:7px 11px}
+table.stack td:first-child{border-top:1px solid var(--line);background:var(--beige)}
+table.stack td::before{
+content:attr(data-th);
+flex:0 0 72px;font-size:12px;font-weight:900;color:var(--ink-soft);
+font-family:var(--sans);
+}
+table.stack td.cond{font-size:14px}
+}
+/* ---------- 부칙형 박스 (버킷리스터) ---------- */
+.vote-card{
+margin-top:6px;background:#fff;
+border:1px solid var(--line);
+}
+.vote-head{
+display:flex;flex-wrap:wrap;align-items:center;gap:8px;
+background:var(--beige);padding:8px 13px;
+border-bottom:1px solid var(--line);
+}
+.vote-head .vh-t{font-weight:900;font-size:14.5px}
+.vote-head .prize{margin-left:auto;display:flex;gap:10px;flex-wrap:wrap}
+.prize span{
+font-size:12.5px;font-weight:900;color:var(--green-deep);white-space:nowrap;
+}
+.vote-card ol{margin:6px 14px 12px}
+.vote-card ol > li{border-bottom:1px dotted var(--hairline);padding-top:6px;padding-bottom:6px}
+.vote-card ol > li:last-child{border-bottom:0}
+.vote-card ol > li::before{top:6px}
+/* ---------- 피드백 구조 예시 ---------- */
+.fb-flow{margin-top:16px}
+.fb-role{
+text-align:center;font-weight:900;font-size:13.5px;color:var(--ink);
+margin:16px 0 8px;letter-spacing:.06em;
+}
+.fb-role::before,.fb-role::after{content:"—";color:var(--line);margin:0 8px}
+.fb-steps{display:grid;gap:8px;grid-template-columns:1fr}
+@media (min-width:640px){
+.fb-steps{grid-template-columns:1fr 24px 1fr 24px 1fr;align-items:stretch}
+}
+.fb-step{
+background:#fff;border:1px solid var(--red);
+padding:11px 12px;
+}
+.fb-step .fs-t{
+display:inline-block;font-weight:900;font-size:12.5px;color:var(--red);
+border:1px solid var(--red);padding:0 8px;margin-bottom:7px;
+letter-spacing:.06em;
+}
+.fb-step p{font-size:13.5px;color:var(--ink-soft);line-height:1.7}
+.fb-arrow{
+display:flex;align-items:center;justify-content:center;
+color:var(--red);font-weight:900;font-size:16px;
+}
+.fb-arrow::before{content:"↓"}
+@media (min-width:640px){ .fb-arrow::before{content:"→"} }
+/* ---------- 개선제안 양식 ---------- */
+.form-diagram{margin-top:12px;display:grid;gap:10px;grid-template-columns:1fr}
+@media (min-width:640px){
+.form-diagram{grid-template-columns:1fr auto 1fr;align-items:stretch}
+}
+.form-card{
+background:#fff;border:1px solid var(--line);
+padding:12px 14px;
+}
+.form-card .fc-t{
+font-weight:900;font-size:15px;text-align:center;
+border-bottom:2px solid var(--ink);padding-bottom:4px;
+}
+.form-card .fc-s{
+font-size:12.5px;color:var(--ink-soft);font-weight:700;text-align:center;
+padding:4px 0 6px;border-bottom:1px solid var(--hairline);margin-bottom:6px;
+}
+.form-card ol > li{border-bottom:1px dotted var(--hairline);padding-top:5px;padding-bottom:5px;font-size:14px}
+.form-card ol > li:last-child{border-bottom:0}
+.form-card ol > li::before{top:5px}
+.form-card .fc-note{font-size:12px;color:var(--ink-soft);margin-top:9px;text-align:center}
+.ba-row{display:flex;gap:8px;margin-top:9px}
+.ba-row div{
+flex:1;background:var(--cream);border:1px dashed var(--line);
+text-align:center;font-size:12.5px;font-weight:900;color:var(--ink-soft);
+padding:16px 6px;
+}
+.form-mid{
+display:flex;flex-direction:column;align-items:center;justify-content:center;
+gap:4px;padding:2px 8px;
+}
+.form-mid .fm-t{font-size:12px;font-weight:900;color:var(--red);text-align:center;line-height:1.5}
+.form-mid .fm-a{color:var(--red);font-weight:900;font-size:18px}
+.form-mid .fm-a::before{content:"↓"}
+@media (min-width:640px){ .form-mid .fm-a::before{content:"→"} }
+/* ---------- 조직도 ---------- */
+.org{padding:36px 0 6px}
+.org .org-note{
+border:1px solid var(--line);
+background:#fff;
+padding:12px 15px;font-size:14.5px;color:var(--ink-soft);
+margin-top:14px;
+}
+.org .org-note b{color:var(--ink)}
+.org-legend{
+display:flex;flex-wrap:wrap;gap:4px 16px;margin:12px 2px 2px;
+font-family:var(--sans);
+}
+.org-legend span{
+display:inline-flex;align-items:center;gap:6px;
+font-size:12px;font-weight:700;color:var(--ink-soft);
+}
+.org-legend i{width:10px;height:10px;display:inline-block}
+.org-flow-note{
+text-align:center;font-weight:900;font-size:13.5px;color:var(--ink);
+margin:16px 0 2px;letter-spacing:.02em;
+}
+.org-grid{display:grid;gap:12px;margin-top:12px;font-family:var(--sans)}
+@media (min-width:660px){
+.org-grid{grid-template-columns:1fr 1fr}
+.org-grid .span2{grid-column:1/-1}
+}
+.dept{background:#fff;border:1px solid var(--line)}
+.dept-head{padding:11px 14px;color:#fff}
+.dept-head .dh-name{font-weight:900;font-size:16px}
+.dept-head .dh-person{font-size:13px;font-weight:700;opacity:.95;margin-top:1px}
+.dept-head .dh-en{font-size:11px;opacity:.75;margin-top:1px;letter-spacing:.03em}
+.dept-head .dh-tag{
+display:inline-block;margin-top:7px;font-size:11px;font-weight:800;
+background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.4);
+padding:1px 7px;
+}
+.dept-body{padding:8px 10px 10px;display:flex;flex-direction:column;gap:7px}
+.team-card{border:1px solid var(--hairline);padding:8px 11px;background:var(--paper)}
+.team-card .tc-n{font-weight:800;font-size:14px}
+.team-card .tc-d{font-size:12.5px;color:var(--ink-soft);font-style:italic;margin-top:1px}
+.parts{display:flex;flex-wrap:wrap;gap:4px;margin-top:5px}
+.parts span{font-size:11.5px;font-weight:700;padding:1px 7px;border:1px solid}
+.p-orange{color:#C24A18;border-color:#E4B49B;background:#FDF3EC}
+.p-green{color:#256F3D;border-color:#A9CDB2;background:#F0F7F1}
+.p-blue{color:#1A6BA8;border-color:#A3C6E0;background:#EFF6FB}
+.p-navy{color:#E7E8F5;border-color:rgba(255,255,255,.35);background:rgba(255,255,255,.1)}
+.ceo-tasks{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}
+.ceo-tasks span{
+font-size:11.5px;font-weight:700;padding:2px 8px;
+background:rgba(255,255,255,.12);color:#DEE0F0;border:1px solid rgba(255,255,255,.22);
+}
+.ceo-task-label{font-size:11px;font-weight:800;letter-spacing:.12em;opacity:.6;margin-top:10px}
+.inhouse-list{display:flex;flex-direction:column;gap:5px}
+.inhouse-list .row{
+display:flex;justify-content:space-between;align-items:center;gap:8px;
+background:#F7F7FC;border:1px solid #DPDFF0;border:1px solid #DDDFF0;
+padding:6px 11px;font-size:13px;
+}
+.inhouse-list .row b{color:#474CB8;font-weight:800}
+.inhouse-list .row span{color:var(--ink-soft);font-weight:700;font-size:12.5px}
+.org-cap{font-size:12px;color:var(--ink-soft);font-weight:600;text-align:right;margin-top:8px;font-family:var(--sans)}
+.org-qr{
+margin-top:14px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+border:1px solid var(--line);background:#fff;padding:12px 14px;
+}
+.org-qr img{width:72px;height:72px;border:1px solid var(--hairline)}
+.org-qr .oq-t{font-weight:900;font-size:14px}
+.org-qr .oq-d{font-size:12.5px;color:var(--ink-soft)}
+/* ---------- 링크 버튼 (문서형) ---------- */
+.link-btn{
+display:inline-flex;align-items:center;gap:7px;
+border:1px solid var(--green);color:var(--green-deep);
+background:#fff;text-decoration:none;
+font-weight:900;font-size:13px;
+padding:7px 14px;margin-top:8px;
+font-family:var(--serif);
+}
+.link-btn:hover{background:var(--green-tint)}
+.link-btn::after{content:"↗";font-size:12px}
+/* ---------- 참고자료 ---------- */
+.ref-grid{display:grid;gap:0;grid-template-columns:1fr;margin-top:18px;border:1px solid var(--line);background:#fff}
+.ref-card{
+padding:18px 18px 16px;
+border-top:1px solid var(--line);
+display:flex;flex-direction:column;
+}
+.ref-card:first-child{border-top:0}
+.ref-card .rc-t{
+font-family:var(--serif);font-weight:900;font-size:16px;color:var(--ink);
+}
+.ref-card .rc-d{font-size:14.5px;color:var(--ink-soft);margin-top:6px}
+.ref-card .qr-row{display:flex;align-items:center;gap:16px;margin-top:12px;flex-wrap:wrap}
+.ref-card .qr-row img{width:86px;height:86px;border:1px solid var(--hairline)}
+.ref-card .qr-row .qr-label{font-size:12px;color:var(--ink-soft);font-weight:700;margin-top:4px;font-family:var(--sans)}
+.acct{
+margin-top:10px;border:1px solid var(--line);background:var(--cream);
+padding:10px 13px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+}
+.acct .ac-num{font-weight:900;font-size:15px;color:var(--ink);font-variant-numeric:tabular-nums}
+.acct button{
+font-family:var(--serif);cursor:pointer;
+border:1px solid var(--green);background:#fff;color:var(--green-deep);
+font-weight:900;font-size:12px;padding:4px 10px;
+}
+.acct button:active{background:var(--green);color:#fff}
+.voice-quote{
+margin-top:10px;border-left:3px solid var(--line);
+padding:4px 0 4px 14px;font-size:14.5px;color:var(--ink-soft);
+}
+.voice-contact{
+margin-top:12px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+font-weight:900;font-size:15px;
+}
+.voice-contact a{
+color:var(--green-deep);text-decoration:underline;text-underline-offset:3px;
+font-variant-numeric:tabular-nums;
+}
+/* ---------- 푸터 (문서 말미) ---------- */
+footer{
+margin-top:54px;
+border-top:3px double var(--ink);
+padding:22px 0 calc(30px + env(safe-area-inset-bottom));
+text-align:center;font-size:13px;font-weight:600;color:var(--ink-soft);
+}
+footer .f-t{
+font-family:var(--serif);font-weight:900;color:var(--ink);
+font-size:15px;margin-bottom:4px;
+}
+/* ---------- 맨 위로 ---------- */
+#toTop{
+position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:40;
+width:40px;height:40px;border:1px solid var(--line);cursor:pointer;
+background:var(--paper);color:var(--ink);font-size:16px;font-weight:900;
+font-family:var(--serif);
+box-shadow:0 2px 6px rgba(60,50,20,.15);
+opacity:0;pointer-events:none;transition:opacity .2s;
+}
+#toTop.show{opacity:1;pointer-events:auto}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+<div class="topbar-in">
+<a class="brand" href="#top">조직문화 가이드 <span class="badge-v">V3</span></a>
+<nav class="nav-scroll" id="nav">
+<a class="nav-chip" href="#four">우리다움</a>
+<a class="nav-chip" href="#org">조직도</a>
+<a class="nav-chip" href="#sec-a">A 신뢰</a>
+<a class="nav-chip" href="#sec-b">B 다정</a>
+<a class="nav-chip" href="#sec-c">C 자기이해</a>
+<a class="nav-chip" href="#sec-d">D 변화</a>
+<a class="nav-chip" href="#sec-z">Z 참고자료</a>
+</nav>
+</div>
+</header>
+<div class="sheet">
+
+<section class="cover" id="top">
+<div class="wrap">
+<div class="eyebrow">조직문화 가이드 · 개정 V3</div>
+<h1 class="cover-title">모두가 나답게 살아갈 수 있는 세상을 위해<br><span class="hl">'우리다움'</span>을 만들어내는 4가지 사람</h1>
+<div class="cover-sub">아래 카드의 항목을 누르면 해당 제도로 바로 이동합니다.</div>
+</div>
+</section>
+
+<section id="four" class="cover-outline wrap">
+<div class="ol-head"><span class="letter">A</span><span class="ol-t">신뢰할 수 있는 사람</span></div>
+<ul class="ol-list">
+<li><a href="#a-time"><b>서로의 시간약속을 어기지 않는다.</b><span>가장 귀한 자원인 시간을 지키는 것이 신뢰의 시작입니다.</span></a></li>
+<li><a href="#a-resp"><b>책임을 다하는 사람은 반드시 인정한다.</b><span>중요한 문제를 끝까지 책임지고 해결한 사람을 우리는 신뢰합니다.</span></a></li>
+</ul>
+<div class="ol-head"><span class="letter">B</span><span class="ol-t">다정한 사람</span></div>
+<ul class="ol-list">
+<li><a href="#b-respect"><b>각자의 나다움을 존중하며 이해한다.</b><span>우리는 모두 하나가 될 수 있다고 판단된 사람들만 선택되어 뭉쳐진 조직입니다.</span></a></li>
+<li><a href="#b-cute"><b>귀엽고, 사랑스러운 장면은 자랑한다.</b><span>오직 귀엽고 사랑스러운 존재가 결국 세상을 구합니다.</span></a></li>
+<li><a href="#b-help"><b>받은 도움은 그 이상으로 돌려준다.</b><span>그것만으로 세상은 선순환으로 나아갑니다.</span></a></li>
+</ul>
+<div class="ol-head"><span class="letter">C</span><span class="ol-t">스스로를 잘 아는 사람</span></div>
+<ul class="ol-list">
+<li><a href="#c-emotion"><b>감정을 쌓아두지 않는다.</b><span>내 감정을 정리한 뒤에 부드럽게 이야기 할 수 있는 시간을 자주 가집시다.</span></a></li>
+<li><a href="#c-recover"><b>회복이 필요하다고 느껴지면 떠나본다.</b><span>건강하고 행복한 마음가짐은 충분한 회복을 통해 완성됩니다.</span></a></li>
+</ul>
+<div class="ol-head"><span class="letter">D</span><span class="ol-t">변화를 만드는 사람</span></div>
+<ul class="ol-list">
+<li><a href="#d-comm"><b>소통은 간결하게, 이유와 목적은 명확히</b><span>본론부터 말하고, 이유와 목적이 질문이 나오지 않게 만들어 둡니다.</span></a></li>
+<li><a href="#d-fb"><b>일의 피드백은 담백하게 주고 받는다.</b><span>고객과 동료의 피드백은 우리를 성찰하게 만들어 준 기회입니다.</span></a></li>
+<li><a href="#d-change"><b>나는 생각보다 많은 것을 변화시킬 수 있다.</b><span>내가 변화시킬 수 있다는 확신을 가지면 일의 가치와 재미가 더해집니다.</span></a></li>
+</ul>
+</section>
+
+<section class="toc wrap" id="toc">
+<h2>목차</h2>
+<p class="toc-note">항목을 누르면 해당 조항으로 이동합니다.</p>
+<div class="toc-grid">
+<div class="toc-box">
+<div class="tb-head"><span class="letter">A</span>신뢰할 수 있는 사람</div>
+<a href="#a-late">[지각비 제도]<span class="pg">04</span></a>
+<a href="#a-job">[직무전환 제도]<span class="pg">05</span></a>
+</div>
+<div class="toc-box">
+<div class="tb-head"><span class="letter">B</span>다정한 사람</div>
+<a href="#b-gather">[게더링 문화]<span class="pg">07</span></a>
+<a href="#b-share">[공유게시물 반응 의무화]<span class="pg">08</span></a>
+</div>
+<div class="toc-box">
+<div class="tb-head"><span class="letter">C</span>스스로를 잘 아는 사람</div>
+<a href="#c-intro">[' ' 동료 소개 작성&amp;조회]<span class="pg">10</span></a>
+<a href="#c-leave">[연차 제도]<span class="pg">11</span></a>
+</div>
+<div class="toc-box">
+<div class="tb-head"><span class="letter">D</span>변화를 만드는 사람</div>
+<a href="#d-fbrule">[동료간 피드백 원칙]<span class="pg">14</span></a>
+<a href="#d-leader">[개선제안 리더 제도]<span class="pg">15</span></a>
+</div>
+<div class="toc-box">
+<div class="tb-head"><span class="letter">Z</span>참고자료</div>
+<a href="#sec-z">지각비 납부 · 동료 소개 카드 · 개선제안서 양식 · 동료 소리함<span class="pg">16</span></a>
+</div>
+</div>
+</section>
+
+<section class="org wrap" id="org">
+<h2>' ' Team 조직도</h2>
+<div class="org-note">
+<b>팀 조직도에 따라 업무요청과 소통체계를 준수합니다.</b><br>
+업무 분담표에 따라 소통을 직접 진행하고, 소통 라인을 기준으로 가장 가까이 있는 오더가 최우선 오더입니다.
+</div>
+
+<div class="org-legend">
+<span><i style="background:var(--org-navy)"></i>대표</span>
+<span><i style="background:var(--org-purple)"></i>크로스펑셔널 (전사 지원)</span>
+<span><i style="background:var(--org-green)"></i>오프라인 라인 조직</span>
+<span><i style="background:var(--org-blue)"></i>온라인 라인 조직</span>
+<span><i style="background:var(--org-orange)"></i>스태프 조직 (대표 직속)</span>
+</div>
+
+<div class="org-grid">
+<div class="dept span2" style="border-color:transparent">
+<div class="dept-head" style="background:var(--org-navy)">
+<div class="dh-name">대표</div>
+<div class="dh-person">장서영</div>
+<div class="ceo-task-label">핵심 업무</div>
+<div class="ceo-tasks">
+<span>조직 비전 설계</span><span>인재 채용</span><span>자금 조달</span><span>신규 프로젝트 수주</span><span>기업 운영 총괄</span>
+</div>
+</div>
+</div>
+
+<div class="dept">
+<div class="dept-head" style="background:var(--org-orange)">
+<div class="dh-name">경영지원본부</div>
+<div class="dh-person">진수랑</div>
+<div class="dh-en">Corporate Support</div>
+<span class="dh-tag">대표 직속 · 스태프</span>
+</div>
+<div class="dept-body">
+<div class="team-card">
+<div class="tc-n">사무국</div>
+<div class="parts"><span class="p-orange">재무 &amp; 세무</span><span class="p-orange">법무</span><span class="p-orange">HRM</span></div>
+</div>
+<div class="team-card"><div class="tc-n">성장추진팀</div></div>
+<div class="team-card"><div class="tc-n">지원사업팀</div></div>
+</div>
+</div>
+
+<div class="dept">
+<div class="dept-head" style="background:var(--org-purple)">
+<div class="dh-name">브랜딩 디렉터</div>
+<div class="dh-person">장서영 (대표 겸임)</div>
+<div class="dh-en">Brand Identity &amp; Creative 총괄</div>
+<span class="dh-tag">크로스펑셔널 · 전사 지원</span>
+</div>
+<div class="dept-body">
+<div class="team-card" style="background:#F7F7FE;border-color:#E3E4F6">
+<div class="tc-n" style="color:#4B50BC">인하우스 팀</div>
+<div class="inhouse-list" style="margin-top:8px">
+<div class="row"><b>브랜드 C&amp;C 관리자</b><span>장서영</span></div>
+<div class="row"><b>브랜드 디자이너</b><span>윤세현</span></div>
+<div class="row"><b>브랜드 마케터</b><span>안은비</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="dept">
+<div class="dept-head" style="background:var(--org-green)">
+<div class="dh-name">오프라인 사업부</div>
+<div class="dh-person">안은비</div>
+<div class="dh-en">오프라인 사업</div>
+</div>
+<div class="dept-body">
+<div class="team-card">
+<div class="tc-n">공간 사업팀</div>
+<div class="parts"><span class="p-green">Cafe &amp; Hall &amp; Bar</span><span class="p-green">Kitchen</span></div>
+</div>
+<div class="team-card">
+<div class="tc-n">사업개발 / 기획 / 전략</div>
+<div class="tc-d">오프라인 신규사업 개발 전담</div>
+</div>
+<div class="team-card">
+<div class="tc-n">오프라인 콘텐츠팀</div>
+<div class="parts"><span class="p-green">공연 및 행사 콘텐츠 제작</span></div>
+</div>
+</div>
+</div>
+
+<div class="dept">
+<div class="dept-head" style="background:var(--org-blue)">
+<div class="dh-name">온라인 사업부</div>
+<div class="dh-person">윤세현</div>
+<div class="dh-en">E-Commerce &amp; Digital</div>
+</div>
+<div class="dept-body">
+<div class="team-card">
+<div class="tc-n">셀퍼 사업팀</div>
+<div class="parts"><span class="p-blue">브랜드 몰</span></div>
+</div>
+<div class="team-card">
+<div class="tc-n">사업개발 / 기획 / 전략</div>
+<div class="tc-d">온라인 신규사업 개발 전담</div>
+</div>
+<div class="team-card">
+<div class="tc-n">미디어콘텐츠팀</div>
+<div class="parts"><span class="p-blue">사진 &amp; 영상 촬영</span><span class="p-blue">SNS 계정</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="org-flow-note">부 (Department) → 팀 (Team) → 파트 (Part)</div>
+<div class="org-cap">2026.08 기준</div>
+
+<div class="org-qr">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAEfElEQVR42u3d3XKjMAyG4Win93/L3oPtZLahrvwHBfLoqENjMC+W+EYWdpQH+87+QAAMMMAAAwwwwAADDDDAMGCAAQaYQ+1jcyTGT1Zez1E/0G5RvcouXTdiuBIwwAADDDAX1jErLUq86JnngSjxKPGffvh3oEXoPE/xeDwam4x0vaqS2i9Y1XMb/RTtmrDan4Fz5JKQwBNjgAEGGGCAuaXAq6Z/crkwoDDqyqI/DRWP8a7PjJjgSmIMAwYYYE4D5ta10/skqj7TUc+81OYNXzZ/jFMvaTeOBvND7uzzP/Eq7OJVAsXEMEx/Gr/kSmIMMAwYYIAh8C4s8FZAjfnnMSPwbp2oIvAEX2CAAQaYt9Ex5UsF05c/+jXIpmkkkqM8Xi7fMXlXtj2OVil0cEVVh9TIm5S0H+1KR0WVGAMMMMAAc3Mwt6yT+dj1fju+BVxxYOWT4krAAAMMMMAAc3qLY6YT8wTNil8YMVwJGGCAAQYYYK5h+yqwjkTVzPpS7bNnm5rx0g6k2uOB6qw/7WL1ehlMFVViDDDAAAPMPWykcCh9C3aUWs0scjAh+fKr7TJigiuJMcAwYIAB5uxgrvNNYHQIvAkxMlJD368FY8GDyWc1uZIYAwwwwAADzOnth01h2hVO+6dm+RRYR93UhATLNZERAwwwwAADDDDAfC8Xzj/zNFJRVdLbLc1ANk1W7gs4sBrDyIgJrsSAAQYYYIA5m45pr9XO65MGFkfaNI3uy5YJyfFeIya4khgDDDDAAPP2YHZNTByc9WhIVFWFXt4kl231XFL7ZsV5jweEJ1cCBhhggAEGmNNbdCzNnRY7dUiOXEjkIqm9dnxgvSsTblwJGGCAAQaYC4Mp7w2mYSayQ3LtIkGr8q0jg9YvxbgSMMAAAwwwwFxZx/TrmryiKhcSHVIjn96b6PKbjxgzkWIMMMAAAwwwp30ZLxF4ExN+9a5GqsVyTZj+ItK6LbsXcyVggAEGmCu8v69TGX5wB+trVDWIkonS7LLHXW1UStrBJZvCXG+AiDHAAAMMMMDcHczpK6r27WDM7E6z8u5iHMjAd4X5XKWZSGAEX2CAAQaY0yudaF9wKtovHONdXPHZ3r4jJrgSAwYYYIAB5j3BxHSLWHnyHoGX67nqt3czqy4MbPJXFnK5dUVVubIriTHAAAMMe3RNuOUH7mRTSxjkv6wqnYnnsdEtE09sn13/VuyvLMYAAwwwwLA1YN5Mx1STKyWqvzx0FfXy0qGSNn1t0fJI6wIvmvNAS7C0J8yiechuvi+M2r2JMYIvMMAAAwwwv2RrlzB45pYWpFvy3YtLqivzs3fMGRoxXAkYYIABBpgbWT1R1aBSqmmffOmjjquV16ZlXqUcM2KWruBQPUepHuBKYgwwwAADDDDXtZ0TVe27/uVCL89LlT000L4jxq5/DBhggAEGmN+x6Ci8rq2kWdrf6A3rIqQSJPpPNqB4OpYwyCuqln6TyJXEGGCAAQYYloJ5892LoxgcXAkYYIABBhhggAEGGGAYMMAAAwwwJ7C/gCoJZn+sVm8AAAAASUVORK5CYII=" alt="팀 조직도 페이지 QR 코드">
+<div>
+<div class="oq-t">팀 조직도 페이지</div>
+<div class="oq-d">모니터로 보는 중이라면 QR을 스캔하세요.</div>
+<a class="link-btn" href="https://team-sm.pages.dev/" target="_blank" rel="noopener">조직도 페이지 열기</a>
+</div>
+</div>
+</section>
+
+<!-- ===================== A ===================== -->
+<section class="divider" id="sec-a">
+<div class="wrap">
+<h2>A. 신뢰할 수 있는 사람</h2>
+</div>
+</section>
+<div class="article wrap">
+
+<article class="principle" id="a-time">
+<h3 class="big">서로의 시간약속을 어기지 않는다.</h3>
+<p class="tagline">가장 귀한 자원인 시간을 지키는 것이 신뢰의 시작입니다.</p>
+<div class="rule"></div>
+<div class="block mean">
+<span class="block-label">의의</span>
+<ul><li>죄송하다는 말만으로는 우리의 낭비된 시간을 되돌릴 수 없습니다. 시간을 잘 지켜 서로의 신뢰를 쌓아갈 수 있는 문화를 만들어 나갑시다.</li></ul>
+</div>
+<div class="block" id="a-late">
+<span class="block-label">[지각비 제도]</span>
+<ol>
+<li>동료들과의 시간약속을 <b>무단으로</b> 어기는 동료에게는 지각비가 발생합니다.</li>
+<li>여기서 무단이 아닌 경우는 사전에 미리 소통하여 조율이 가능한 시점을 기준으로 하고 있습니다.</li>
+<li>지각비는 1분당 1,000원입니다. <span style="color:var(--ink-soft)">(Ex. 오후 2시 약속시간에 2시 2분이 되면 2,000원 지각비 발생)</span>
+<div class="sub-note">지각비 최대 한도는 100,000원입니다.</div></li>
+<li>모든 지각비는 개선활동비로 귀속되며, 동료들을 위한 업무효율화 예산으로 사용됩니다.</li>
+<li>본 지각비는 미팅, 회신시간 등 모든 업무적 시간약속에 적용되며, 정규 근무시간 근무자에게는 해당되지 않습니다.</li>
+</ol>
+<p style="margin-top:8px;font-size:13.5px;color:var(--ink-soft)">→ 납부 계좌는 <a href="#z-late">참고자료의 [지각비 제도 납부]</a>를 확인하세요.</p>
+</div>
+</article>
+
+<article class="principle" id="a-resp">
+<h3 class="big">책임을 다하는 사람은 반드시 인정한다.</h3>
+<p class="tagline">중요한 문제를 끝까지 책임지고 해결한 사람을 우리는 신뢰합니다.</p>
+<div class="rule"></div>
+<div class="block mean">
+<span class="block-label">의의</span>
+<ul><li>많은 시간 일한다고 인정받을 수 있는 것은 아닙니다. 일은 양보다 질로 평가받아야 합니다. 많이 일했다는 과로문화를 없애고, 실력을 키우는 환경을 만들어 나갑시다.</li></ul>
+</div>
+<div class="block">
+<span class="block-label">[책임감 평가]</span>
+<p class="free">할당된 업무 내에서 각 구성원이 질 수 있는 책임은 크게 3가지 입니다.</p>
+<ol>
+<li>일의 품질 <span style="color:var(--ink-soft)">(이 일을 안정적으로 지속할 수 있는 사람인가?)</span></li>
+<li>팀 내 평판 <span style="color:var(--ink-soft)">(팀의 화합을 지속시킬 수 있는 사람인가?)</span></li>
+<li>인성 <span style="color:var(--ink-soft)">(우리 조직에 적합한 사람인가?)</span></li>
+</ol>
+<div class="point-line">고로, 직원이 책임을 진다는 의미는 '내가 이 일을 완수했을 때 위 내용에 대해 긍정적인 평가와 보상을 받을 자격이 있다'라는 의미입니다.</div>
+</div>
+</article>
+
+<article class="principle" id="a-job">
+<div class="block" style="margin-top:0">
+<span class="block-label" style="font-size:20px">[직무 전환 제도]</span>
+<ol>
+<li>업무 조직도를 기반으로 책임을 다할 의지가 있는 직원이라면 누구나 업무 전환/승격을 신청할 수 있습니다.</li>
+<li>업무 전환/승격은 현 인사담당자에게 직접 대면면담을 신청하여 진행합니다.</li>
+<li>인사담당자는 상호협의를 긴밀하게 하여 면담신청 후 7일 내로 결과를 통보해야 합니다.</li>
+<li>직급에 맞게 그에 맞는 추가업무가 생길 수 있으며, 그에 맞는 대우와 보상이 따릅니다.</li>
+<li>업무 전환/승격 후 1개월 간 수습기간을 진행하며, 수습기간 이후에 인사담당자의 평가로 최종 결정됩니다.</li>
+</ol>
+</div>
+<div class="tbl-wrap">
+<div class="tbl-title">직급급 체계</div>
+<table>
+<thead><tr><th>직급</th><th>보상</th><th>변동 조건</th></tr></thead>
+<tbody>
+<tr><td><b>일반</b></td><td>없음</td><td>성과에 따른 추가지급</td></tr>
+<tr><td><b>Head</b></td><td>경영성과에 따른 차등지급</td><td>성과에 따른 추가지급</td></tr>
+<tr><td><b>경영진</b></td><td>경영성과에 따른 차등지급</td><td>성과에 따른 차감</td></tr>
+</tbody>
+</table>
+<div class="tbl-cap"><span>&lt;표 A-1&gt;</span><span>2026.08 기준</span></div>
+</div>
+</article>
+</div>
+
+<!-- ===================== B ===================== -->
+<section class="divider" id="sec-b">
+<div class="wrap">
+<h2>B. 다정한 사람</h2>
+</div>
+</section>
+<div class="article wrap">
+
+<article class="principle" id="b-respect">
+<h3 class="big">각자의 나다움을 존중하며 이해한다.</h3>
+<p class="tagline">우리는 모두 하나가 될 수 있다고 판단된 사람들만 선택되어 뭉쳐진 조직입니다.</p>
+<div class="rule"></div>
+<div class="block mean">
+<span class="block-label">의의</span>
+<ul><li>때로는 나와 다른 사람을 이해하는 것이 무척 어려울 때도 있지만, 다른 세계를 부정적으로 판단하고 존중하지 못하면, 나의 세상도 절대 존중 받을 수 없습니다. 각자의 '나다운 삶'을 응원하는 문화를 만들어 나갑시다.</li></ul>
+</div>
+<div class="block" id="b-gather">
+<span class="block-label">[게더링 문화]</span>
+<ol>
+<li>전 직원은 월 1회 정기 게더링에 참여하여 나답게 살아가는 팀원들을 이해하고, 가까워지는 기회를 가져야합니다.</li>
+<li>개더링에서는 3가지 활동을 진행합니다.
+<div class="inner">
+<p><span class="abc">a.</span>청소/보수 활동 (모든 동료와 함께 업무 수행)</p>
+<p><span class="abc">b.</span>단합 활동 (모든 동료와 서로 이야기 나누기)</p>
+<p><span class="abc">c.</span>월간 회고 (타팀 동료, 조직의 업무활동을 피드백)</p>
+</div></li>
+<li>개더링 활동은 상황에 따라 변동 될 수 있습니다.</li>
+</ol>
+</div>
+<div class="tbl-wrap">
+<div class="tbl-title">버킷리스터 투표</div>
+<div class="vote-card">
+<div class="vote-head">
+<span class="vh-t">버킷리스터 투표</span>
+<span class="prize"><span>1위 : 10만원</span><span>2위 : 5만원</span></span>
+</div>
+<ol>
+<li>한달 동안 나만의 버킷리스트를 위해 진행했던 활동을 발표합니다.</li>
+<li>내가 다음 달에는 어떤 활동을 하여 어디까지 달성할 것인지도 포함되면 좋아요.</li>
+<li>모든 발표가 끝나면 무기명으로 발표자에게 투표합니다.</li>
+<li>모든 참여자는 총 2표의 투표권을 가집니다.</li>
+<li>내 자신 또는 한 사람에게 2번 중복투표는 불가합니다.</li>
+<li>동점 시 가위바위보로 순위를 정합니다.</li>
+</ol>
+</div>
+<div class="tbl-cap"><span>&lt;표 B-1&gt;</span><span>2026.08 기준</span></div>
+</div>
+</article>
+
+<article class="principle" id="b-cute">
+<h3 class="big">귀엽고, 사랑스러운 장면은 자랑한다.</h3>
+<p class="tagline">오직 귀엽고, 사랑스러운 존재가 결국 세상을 구합니다.</p>
+<div class="rule"></div>
+<div class="block mean">
+<span class="block-label">의의</span>
+<ul><li>낭만스러운 순간, 귀엽고, 사랑스러운 순간을 서로 함께 기억하는 것은 더 끈끈한 공동체 조직이 될 수 있는 버팀목이 됩니다. 작은 공유가 누군가에게는 큰 위로가 될 수 있다는 것을 기억해 주세요.</li></ul>
+</div>
+<div class="block" id="b-share">
+<span class="block-label">[공유게시물 반응 의무화]</span>
+<ol>
+<li>팀원이 귀엽거나 사랑스러운 게시물을 자랑하면 적극적으로 반응합니다.</li>
+<li>게시물을 공유할 때 모든 동료 중 한명을 태그해 지목할 수 있습니다.</li>
+<li>태그 된 팀원은 공유게시물에 대한 최소한의 반응을 반드시 나타내야 합니다.</li>
+</ol>
+</div>
+</article>
+
+<article class="principle" id="b-help">
+<h3 class="big">받은 도움은 그 이상으로 돌려준다.</h3>
+<p class="tagline">그것만으로 세상은 선순환으로 나아갑니다.</p>
+<div class="rule"></div>
+<div class="block mean">
+<span class="block-label">의의</span>
+<ul><li>"도움을 주면 나만 힘들지..." 이런 생각이 서로를 더 지치게 합니다. 도움을 받고자 한다면 적극적으로 도와주는 것이 최선의 방법일 것 입니다. 받은 도움은 그 이상을 돌려주려고 노력하는 다정한 문화를 만들어 나갑시다.</li></ul>
+</div>
+<div class="block">
+<span class="block-label">[이 달의 칭찬 투표]</span>
+<ul><li>도움을 주고 받았던 동료를 기억하며, 게더링 '이 달의 칭찬투표'에서 투표해 주세요.</li></ul>
+</div>
+</article>
+</div>
+
+<!-- ===================== C ===================== -->
+<section class="divider" id="sec-c">
+<div class="wrap">
+<h2>C. 스스로를 잘 아는 사람</h2>
+</div>
+</section>
+<div class="article wrap">
+
+<article class="principle" id="c-emotion">
+<h3 class="big">감정을 쌓아두지 않는다.</h3>
+<p class="tagline">내 감정을 잘 정리해서 부드럽게 이야기 할 수 있는 시간을 자주 가집시다.</p>
+<div class="rule"></div>
+<div class="block mean">
+<span class="block-label">의의</span>
+<ul><li>불편한 이야기는 늦출수록 더 큰 문제를 야기합니다. 서로가 순간의 감정으로 이야기하지 않아야 하며, 하루가 넘어가기 전에 서로에게 솔직한 대화를 요청할 수 있는 문화를 만들어 나갑시다.</li></ul>
+</div>
+<div class="block" id="c-intro">
+<span class="block-label">[' ' 동료 소개 작성&amp;조회]</span>
+<ol>
+<li>모든 구성원은 본인을 소개하는 설문지를 작성합니다.</li>
+<li>본 설문지 결과는 모든 구성원이 조회할 수 있으며, 수정신청은 매달 게더링 때 인사담당자에게 요청합니다.</li>
+<li>내 동료를 더 깊게 이해하기 위한 동료소개 Notion 대시보드를 확인합니다.</li>
+<li>서로의 성향을 파악하고, 고려하여 행동하면 더욱 대화가 수월해 집니다.</li>
+</ol>
+<p style="margin-top:8px;font-size:13.5px;color:var(--ink-soft)">→ 동료소개 대시보드 링크는 <a href="#z-intro">참고자료의 [동료 소개 카드]</a>에 있습니다.</p>
+</div>
+<div class="block">
+<span class="block-label">[부드럽게 이야기 할 수 있는 Self Question]</span>
+<ol>
+<li>내가 이 사람의 성향을 충분히 파악하고 있는가? <span style="color:var(--ink-soft)">(아직 모르겠다면 확인부터 한다.)</span></li>
+<li>해야 할 이야기에 개인적인 감정이 들어있는가? <span style="color:var(--ink-soft)">(해야할 이야기는 오직 업무 개선에 대한 것이다.)</span></li>
+<li>내가 오해하게 만든 부분은 없었는가? <span style="color:var(--ink-soft)">(오해할 여지가 있었다면 사과하는 편이 낫다.)</span></li>
+<li>과거의 일을 따지지 않고, 앞으로에 대한 이야기 하려고 하는가? <span style="color:var(--ink-soft)">(미래를 이야기하는게 건설적인 대화가 된다.)</span></li>
+</ol>
+<div class="point-line">서로를 존중하는 마음으로 솔직하게 대화에 임해주세요.</div>
+</div>
+</article>
+
+<article class="principle" id="c-recover">
+<h3 class="big">회복이 필요하다고 느껴지면 떠나본다.</h3>
+<p class="tagline">건강하고 행복한 마음가짐은 충분한 회복을 통해 완성됩니다.</p>
+<div class="rule"></div>
+<div class="block mean">
+<span class="block-label">의의</span>
+<ul><li>새로운 일을 찾아 떠나도 되고, 여행을 떠나도 됩니다. 생각보다 우리가 마주하는 대부분의 문제는 내가 건강하고, 행복해지는 것만으로도 해결될 것 입니다. 서로에게 긍정적인 에너지를 줄 수 있는 문화를 만들어 나갑시다.</li></ul>
+</div>
+<div class="block" id="c-leave">
+<span class="block-label">[연차 제도]</span>
+<ol>
+<li>모든 구성원은 동료와 근무를 조정할 수 있는 현실적인 선에서 무기한 연차&amp;대체근무가 가능합니다.</li>
+<li>단, 근무표 변동에 있어 운영에 차질이 없을 것이라는 팀장(Head 급 이상)의 동의를 꼭 받아야 합니다.
+<div class="sub-note"><b>변동 시 체크해야할 부분!</b><br>
+- 이 시간대, 지금 기준으로 서비스가 문제 없이 가능한가?<br>
+- 사람 수 + 숙련도가 모두 맞는가?<br>
+- 피크 타임 기준이 무너지지 않는가?</div></li>
+<li>연차사용으로 인한 운영효율의 공백은 개별팀 월간 운영 지원금을 사용하여 자유롭게 보충할 수 있습니다.</li>
+<li>월간 운영 지원금이 남을 경우 이월이 가능합니다. (매월 1일)</li>
+<li>운영 지원금은 팀장(Head)이 관리하며, 재무담당자와 조율하여 지급을 요청할 수 있습니다.</li>
+</ol>
+</div>
+<div class="tbl-wrap">
+<div class="tbl-title">월간 운영 지원금</div>
+<table>
+<thead><tr><th>팀</th><th>현금</th><th>매장 포인트</th></tr></thead>
+<tbody>
+<tr><td><b>주방팀</b></td><td>100,000 원</td><td>100,000 포인트</td></tr>
+<tr><td><b>카페&amp;홀&amp;바</b></td><td>100,000 원</td><td>100,000 포인트</td></tr>
+</tbody>
+</table>
+<div class="tbl-cap"><span>&lt;표 C-1&gt;</span><span>2026.08 기준</span></div>
+</div>
+</article>
+</div>
+
+<!-- ===================== D ===================== -->
+<section class="divider" id="sec-d">
+<div class="wrap">
+<h2>D. 변화를 만드는 사람</h2>
+</div>
+</section>
+<div class="article wrap">
+
+<article class="principle" id="d-comm">
+<h3 class="big">소통은 간결하게, 이유와 목적은 명확히</h3>
+<p class="tagline">본론부터 말하고, 이유와 목적에 대한 질문이 나오지 않게 만들어 둡니다.</p>
+<div class="rule"></div>
+<div class="block mean">
+<span class="block-label">의의</span>
+<ul><li>우리는 수년간 소통의 고통 속에서 살아왔습니다. 불필요하거나 모호한 소통은 최대한 줄이고, 효율적이고 투명한 소통을 지향하는 문화를 만들어 나갑시다.</li></ul>
+</div>
+<div class="block">
+<span class="block-label">[짧게 소통하는 Tip]</span>
+<ol>
+<li><b>본론부터 말한다.</b> <span style="color:var(--ink-soft)">(요구내용/ 결정사항/ 기한 내 조치내용 / 결과 등)</span>
+<div class="inner"><p><span class="abc">a.</span>~이 필요해요., ~을 언제까지 해볼까요?, ~이 됐습니다.</p></div></li>
+<li><b>이유&amp;목적을 이어서 말한다.</b> <span style="color:var(--ink-soft)">(문제 → 예상 결과 → 내 의견)</span>
+<div class="inner">
+<p><span class="abc">a.</span>~이 계속 발생되어 ~이 되고 말거에요, 그래서 이렇게 결정하면 좋겠어요.</p>
+<p><span class="abc">b.</span>~을 안하면 ~이 없을거에요. ~을 하기 위해 가장 최선의 방법이라고 생각해요.</p>
+</div></li>
+</ol>
+</div>
+</article>
+
+<article class="principle" id="d-fb">
+<h3 class="big">일의 피드백은 담백하게 주고 받는다.</h3>
+<p class="tagline">고객과 동료의 피드백은 우리를 성찰하게 만들어 준 기회입니다.</p>
+<div class="rule"></div>
+<div class="block mean">
+<span class="block-label">의의</span>
+<ul>
+<li>피드백을 통해 내 시각에서 볼 수 없었던 새로운 관점을 발견하고 겸손한 마음으로 성찰할 수 있는 기회라고 생각해야 합니다. 모든 피드백은 우리의 성장을 위해 한다는 것에 서로 공감하며, 긍정적이고, 담백하게 받아드리는 문화를 만들어 나갑시다.</li>
+<li>단, 너무 많은 내용의 피드백은 더 큰 혼란을 만들 수 있다는 것을 기억합시다.</li>
+</ul>
+</div>
+<div class="block" id="d-fbrule">
+<span class="block-label">[동료간 피드백 원칙]</span>
+<ol>
+<li>피드백은 직급과 팀과 관계없이 모두에게 직접적으로 할 수 있습니다.</li>
+<li>피드백은 단순히 내용만 전달만 하는 것이 아니라 하게 된 이유와 개선방향도 함께 제공해야 합니다.</li>
+<li>감정과 근거 없는 추측은 배제하고 사실 위주로만 진행합니다.</li>
+<li>개선 방향은 피드백을 받는 사람이 최종적으로 정하고, 정하기 어려운 경우 상사와 논의하여 정리합니다.</li>
+<li>최종 피드백 개선여부는 피드백 제공자에게 공유하여 마무리 합니다.</li>
+</ol>
+</div>
+<div class="fb-flow">
+<div class="tbl-title" style="margin-top:16px">피드백 구조 예시</div>
+<div class="fb-role">피드백 하는 사람</div>
+<div class="fb-steps">
+<div class="fb-step"><span class="fs-t">팩트 전달</span>
+<p>"오늘 주방팀에서 메뉴가 많이 늦어져서 손님들의 불평이 있었고, 홀에서 서비스를 많이 나가게 되었어요."</p></div>
+<div class="fb-arrow" aria-hidden="true"></div>
+<div class="fb-step"><span class="fs-t">하게 된 이유</span>
+<p>"앞으로 이 부분이 내일까지 개선되지 않으면, 홀팀 재고가 금방 떨어져버려서 내일 업무가 많이 쌓이게 될거에요."</p></div>
+<div class="fb-arrow" aria-hidden="true"></div>
+<div class="fb-step"><span class="fs-t">개선 방향</span>
+<p>"메뉴 조리시간을 5분씩 더 줄여보는 매뉴얼을 새로 만들어 보면 어떨까요?"</p></div>
+</div>
+<div class="fb-role">피드백 받는 사람</div>
+<div class="fb-steps">
+<div class="fb-step"><span class="fs-t">개선 방향</span>
+<p>"그것도 좋네요! 하지만 지금 당장은 설거지 효율을 개선해야 해요."</p></div>
+<div class="fb-arrow" aria-hidden="true"></div>
+<div class="fb-step"><span class="fs-t">하게 된 이유</span>
+<p>"설거지 효율이 메뉴 조리시간에 직접적인 영향이 있어요."</p></div>
+<div class="fb-arrow" aria-hidden="true"></div>
+<div class="fb-step"><span class="fs-t">팩트 전달</span>
+<p>"설거지가 밀리면 메뉴를 제조할 수 있는 팬이 부족해지기 때문이에요"</p></div>
+</div>
+<div class="warn-line">이런 구조로 이야기할 수 없는 것이라면 차라리 피드백을 하지 않는 편이 낫습니다.</div>
+</div>
+</article>
+
+<article class="principle" id="d-change">
+<h3 class="big">나는 생각보다 많은 것을 변화시킬 수 있다.</h3>
+<p class="tagline">내가 변화시킬 수 있다는 확신을 가지면 일의 가치와 재미가 더해집니다.</p>
+<div class="rule"></div>
+<div class="block mean">
+<span class="block-label">의의</span>
+<ul><li>우리 조직 안에서는 의지만 있다면 누구나 변화를 만드는 사람이 될 수 있습니다. 그게 무엇이 됐든 말이죠. 우리는 단순한 일을 하기 위해 모인 사람들이 아니라 세상의 변화를 만드는 팀이라는 것을 절대 잊어서는 안 됩니다.</li></ul>
+</div>
+<div class="block" id="d-leader">
+<span class="block-label">[개선제안 리더 제도]</span>
+<ol>
+<li>직급과 연차를 떠나 누구나 개선 프로젝트를 기획하고, 변화시킬 개선제안 리더가 될 수 있습니다.
+<div class="inner"><p><span class="abc">a.</span>경영진은 이 프로젝트가 막대한 영업손실을 가져오지 않는다고 판단되는 한 간섭하거나 제재하지 않는다.</p></div></li>
+<li>개선제안 리더는 프로젝트 팀을 직접 꾸려야 합니다. (팀 구성 제한은 없습니다.)</li>
+<li>개선제안 리더는 프로젝트 양식을 준수하여 작성하고, 재무담당자에게 개선활동비를 요청할 수 있습니다.</li>
+<li>이 후 프로젝트 운영은 자율적으로 진행하면 됩니다.</li>
+<li>최종 개선결과서를 정리해 대표에게 심사를 요청하고, 경영진 회의를 통해 최종적으로 제안의 등급을 판정합니다.</li>
+<li>프로젝트 등급 평가를 받은 리더는 등급표에 의거해 보상금을 지급받습니다.</li>
+<li>조정기간이 공지되면, 개선제안은 본인 팀으로만 한정되어 팀 업무 외 신규 프로젝트를 개설할 수 없습니다.</li>
+</ol>
+</div>
+<div class="tbl-wrap">
+<div class="tbl-title">개선제안 프로젝트 양식 (총 2장)</div>
+<div class="form-diagram">
+<div class="form-card">
+<div class="fc-t">사전 검토</div>
+<div class="fc-s">재무 담당자</div>
+<ol>
+<li>개선 제안 프로젝트 이름</li>
+<li>참여한 리더, 팀원</li>
+<li>개선제안 목적/이유/필요예산</li>
+<li>개선 제안 목표/ 예상 결과</li>
+</ol>
+<div class="fc-note">(위 내용이 포함되는 문서 양식은 자율)</div>
+</div>
+<div class="form-mid">
+<span class="fm-t">최소 2주 이상<br>성과/효과 모니터링</span>
+<span class="fm-a" aria-hidden="true"></span>
+</div>
+<div class="form-card">
+<div class="fc-t">사후 검토</div>
+<div class="fc-s">대표</div>
+<ol>
+<li>개선 제안 프로젝트 이름</li>
+<li>참여한 리더, 팀원 (과업 분배 지분%)</li>
+<li>개선 제안 실제 성과</li>
+</ol>
+<div class="ba-row"><div>Before 사진</div><div>After 사진</div></div>
+<div class="fc-note">(위 내용이 포함되는 문서 양식은 자율)</div>
+</div>
+</div>
+<p style="margin-top:8px;font-size:13.5px;color:var(--ink-soft)">→ 참고 양식은 <a href="#z-form">참고자료의 [개선제안서 양식]</a>에서 확인하세요.</p>
+</div>
+<div class="tbl-wrap">
+<div class="tbl-title">개선제안 제도 등급표</div>
+<table class="stack">
+<thead><tr><th>등급</th><th>보상</th><th>평가 조건</th></tr></thead>
+<tbody>
+<tr><td data-th="등급"><span class="grade g1">1등급</span></td><td data-th="보상">+1,000,000 원 이상</td><td data-th="평가 조건" class="cond">조직의 단기적, 장기적 성장을 만드는데에 큰 공을 세운 경우</td></tr>
+<tr><td data-th="등급"><span class="grade g2">2등급</span></td><td data-th="보상">600,000 원</td><td data-th="평가 조건" class="cond">조직의 단기적 성장을 만드는데에 확실한 영향을 준 경우</td></tr>
+<tr><td data-th="등급"><span class="grade g3">3등급</span></td><td data-th="보상">300,000 원</td><td data-th="평가 조건" class="cond">모든 팀원들의 업무효율에 지대한 영향을 끼친 경우</td></tr>
+<tr><td data-th="등급"><span class="grade g4">4등급</span></td><td data-th="보상">100,000 원</td><td data-th="평가 조건" class="cond">개별팀의 효율화에 확실한 개선을 만든 경우</td></tr>
+<tr><td data-th="등급"><span class="grade g5">5등급</span></td><td data-th="보상">30,000 원</td><td data-th="평가 조건" class="cond">직원들의 행복도가 올라가거나 팀원들의 사기가 올라간 경우</td></tr>
+<tr><td data-th="등급"><span class="grade">반려</span></td><td data-th="보상">없음</td><td data-th="평가 조건" class="cond">개선효과가 없으면, 제안해도 등급평가를 받을 수 없음</td></tr>
+</tbody>
+</table>
+<div class="tbl-cap"><span>&lt;표 D-1&gt;</span><span>2026.08 기준</span></div>
+</div>
+</article>
+</div>
+
+<!-- ===================== Z ===================== -->
+<section class="divider" id="sec-z">
+<div class="wrap">
+<h2>Z. 참고 자료</h2>
+</div>
+</section>
+<div class="article wrap" style="padding-bottom:10px">
+<div class="ref-grid">
+
+<div class="ref-card" id="z-late">
+<div class="rc-t">[지각비 제도 납부]</div>
+<div class="rc-d">지각비 납부는 아래 계좌번호로 입금해주세요. (Ex. 입금자명 : 윤세현 지각비)</div>
+<div class="acct">
+<span class="ac-num">토스뱅크 1001-3440-3121 (박진수)</span>
+<button type="button" onclick="copyText('토스뱅크 1001-3440-3121', this)">계좌 복사</button>
+</div>
+<div class="qr-row">
+<div>
+<img src="data:image/png;base64,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" alt="입금 내역 리스트 관리 QR 코드">
+<div class="qr-label">입금 내역 리스트 관리</div>
+</div>
+<div>
+<a class="link-btn" href="https://docs.google.com/spreadsheets/d/1IQQXg2E1F_Tu2jv9ueR0HOhpUeBDIPQ87FC2hY-lEfM/edit?usp=sharing" target="_blank" rel="noopener">입금 내역 시트 열기</a>
+</div>
+</div>
+</div>
+
+<div class="ref-card" id="z-intro">
+<div class="rc-t">[동료 소개 카드]</div>
+<div class="rc-d">아래 QR 코드를 통해 동료들의 소개를 확인하실 수 있습니다.</div>
+<div class="qr-row">
+<div>
+<img src="data:image/png;base64,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" alt="동료소개 노션 페이지 QR 코드">
+<div class="qr-label">동료소개 노션 페이지</div>
+</div>
+<div>
+<a class="link-btn" href="https://singlemark.notion.site/2ed41b10f64b805d8004f69fcff0235f?v=2ed41b10f64b8132bacb000cf46aeefd" target="_blank" rel="noopener">동료소개 노션 열기</a>
+</div>
+</div>
+</div>
+
+<div class="ref-card" id="z-form">
+<div class="rc-t">[개선제안서 양식]</div>
+<div class="rc-d">아래 QR 코드를 통해 개선제안서 참고 양식을 확인하실 수 있습니다.</div>
+<div class="qr-row">
+<div>
+<img src="data:image/png;base64,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" alt="개선 제안서 양식 드라이브 QR 코드">
+<div class="qr-label">개선 제안서 양식 드라이브</div>
+</div>
+<div>
+<a class="link-btn" href="https://drive.google.com/drive/folders/1IFlOo5RoVu7botI3wkKR7VvnYKBtNON5?usp=drive_link" target="_blank" rel="noopener">양식 드라이브 열기</a>
+</div>
+</div>
+</div>
+
+<div class="ref-card" id="z-voice">
+<div class="rc-t">[동료 소리함]</div>
+<div class="voice-quote">
+' ' 와 함께하는 사랑하는 동료님. 어떤 문제가 있으셨나요?<br><br>
+문제를 직시하는 건의사항이나 협조가 필요한 신고내용도 괜찮습니다. 혹시 말 못 할 이야기가 있었다면, 이 때만큼은 솔직하고 가감없이 이야기를 담아 전해주세요.<br>
+<span style="font-size:13px">(오직 대표자에게만 이야기가 전달되는 내용이며, 비밀을 지켜줄 것을 약속드립니다)</span>
+</div>
+<div class="voice-contact">
+대표 장서영
+<a href="tel:010-3119-1160">010-3119-1160</a>
+</div>
+</div>
+
+</div>
+</div>
+
+<footer>
+<div class="wrap">
+<div class="f-t">'우리다움'을 만들어내는 4가지 사람</div>
+조직문화 가이드 · 개정 V3 · 2026.08 기준
+</div>
+</footer>
+
+</div><!-- /sheet -->
+<button id="toTop" aria-label="맨 위로">↑</button>
+
+<script>
+(function(){
+var chips = document.querySelectorAll('.nav-chip');
+var map = {};
+chips.forEach(function(c){ map[c.getAttribute('href').slice(1)] = c; });
+var targets = Array.prototype.map.call(chips, function(c){
+return document.getElementById(c.getAttribute('href').slice(1));
+}).filter(Boolean);
+var navBox = document.getElementById('nav');
+function setActive(id){
+chips.forEach(function(c){ c.classList.remove('active'); });
+var chip = map[id];
+if(chip){
+chip.classList.add('active');
+/* 페이지 스크롤에 간섭하지 않도록 내비게이션 컨테이너만 직접 이동 */
+var left = chip.offsetLeft - (navBox.clientWidth - chip.offsetWidth) / 2;
+navBox.scrollLeft = Math.max(0, left);
+}
+}
+var current = null, ticking = false;
+function update(){
+ticking = false;
+var y = window.scrollY + 90;
+var active = null;
+for(var i=0;i<targets.length;i++){
+if(targets[i].offsetTop <= y) active = targets[i].id;
+}
+if(active !== current){ current = active; if(active) setActive(active); }
+var btn = document.getElementById('toTop');
+if(window.scrollY > 600) btn.classList.add('show'); else btn.classList.remove('show');
+}
+window.addEventListener('scroll', function(){
+if(!ticking){ ticking = true; requestAnimationFrame(update); }
+}, {passive:true});
+update();
+document.getElementById('toTop').addEventListener('click', function(){
+window.scrollTo({top:0, behavior:'smooth'});
+});
+})();
+function copyText(txt, btn){
+function done(){ var o=btn.textContent; btn.textContent='복사됨!'; setTimeout(function(){btn.textContent=o;},1500); }
+if(navigator.clipboard && navigator.clipboard.writeText){
+navigator.clipboard.writeText(txt).then(done).catch(function(){ fallback(); });
+} else { fallback(); }
+function fallback(){
+var ta=document.createElement('textarea'); ta.value=txt; document.body.appendChild(ta);
+ta.select(); try{ document.execCommand('copy'); done(); }catch(e){} document.body.removeChild(ta);
+}
+}
+</script>
+</body>
+</html>
+
