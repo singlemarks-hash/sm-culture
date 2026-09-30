@@ -475,6 +475,27 @@ padding:6px 11px;font-size:13px;
 }
 .inhouse-list .row b{color:#474CB8;font-weight:800}
 .inhouse-list .row span{color:var(--ink-soft);font-weight:700;font-size:12.5px}
+.lv{
+display:inline-block;font-size:10.5px;font-weight:800;line-height:1.5;
+padding:0 6px;margin-left:3px;vertical-align:1px;
+background:rgba(0,0,0,.07);color:var(--ink-soft);border:1px solid var(--hairline);
+}
+.dept-head .lv{background:rgba(255,255,255,.18);color:#fff;border-color:rgba(255,255,255,.4)}
+.dh-tasks{list-style:none;margin-top:8px;display:flex;flex-direction:column;gap:2px}
+.dh-tasks li,.tc-l li{position:relative;padding-left:11px}
+.dh-tasks li{font-size:12.5px;font-weight:600;opacity:.92}
+.dh-tasks li::before,.tc-l li::before{content:"";position:absolute;left:0;top:.62em;width:4px;height:4px;border-radius:50%;background:currentColor;opacity:.6}
+.team-card .tc-p{font-size:13px;font-weight:700;margin-top:2px}
+.tc-l{list-style:none;margin-top:5px;display:flex;flex-direction:column;gap:1px}
+.tc-l li{font-size:12.5px;color:var(--ink-soft)}
+.part-list{display:flex;flex-direction:column;gap:4px;margin-top:8px}
+.part-list .row{
+display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;
+background:#F0F7F1;border:1px solid #A9CDB2;padding:5px 10px;font-size:13px;
+}
+.part-list .row b{color:#256F3D;font-weight:800}
+.part-list .row>span{color:var(--ink);font-weight:700;font-size:12.5px}
+.part-list .tmp{font-size:10.5px;font-weight:800;color:#256F3D;border:1px dashed #6FA67F;padding:0 5px;margin-left:2px}
 .org-cap{font-size:12px;color:var(--ink-soft);font-weight:600;text-align:right;margin-top:8px;font-family:var(--sans)}
 .org-qr{
 margin-top:14px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;
@@ -646,20 +667,88 @@ opacity:0;pointer-events:none;transition:opacity .2s;
 
 <div class="org-legend">
 <span><i style="background:var(--org-navy)"></i>대표</span>
-<span><i style="background:var(--org-purple)"></i>크로스펑셔널 (전사 지원)</span>
-<span><i style="background:var(--org-green)"></i>오프라인 라인 조직</span>
-<span><i style="background:var(--org-blue)"></i>온라인 라인 조직</span>
-<span><i style="background:var(--org-orange)"></i>스태프 조직 (대표 직속)</span>
+<span><i style="background:var(--org-purple)"></i>브랜드 전략부</span>
+<span><i style="background:var(--org-green)"></i>F&amp;B&amp;C 사업부</span>
+<span><i style="background:var(--org-orange)"></i>경영지원본부</span>
 </div>
 
 <div class="org-grid">
 <div class="dept span2" style="border-color:transparent">
 <div class="dept-head" style="background:var(--org-navy)">
 <div class="dh-name">대표</div>
-<div class="dh-person">장서영</div>
+<div class="dh-person">장서영 <span class="lv">L5</span></div>
 <div class="ceo-task-label">핵심 업무</div>
 <div class="ceo-tasks">
-<span>조직 비전 설계</span><span>인재 채용</span><span>자금 조달</span><span>신규 프로젝트 수주</span><span>기업 운영 총괄</span>
+<span>기업 경영전략 및 신사업 기획</span><span>조직(부) 목표 관리</span><span>대내외 협력 (파트너 관리)</span><span>버킷리스트 브랜딩 활동</span>
+</div>
+</div>
+</div>
+
+<div class="dept">
+<div class="dept-head" style="background:var(--org-purple)">
+<div class="dh-name">브랜드 전략부</div>
+<div class="dh-person">안은비 <span class="lv">L4</span></div>
+<ul class="dh-tasks">
+<li>브랜딩 프로젝트 기획 · 수행 총괄</li>
+<li>기업 브랜드 디자인 &amp; 대내외 소통 얼라인</li>
+<li>브랜드 프로젝트 · 행사 운영 관리</li>
+</ul>
+</div>
+<div class="dept-body">
+<div class="team-card">
+<div class="tc-n">프로젝트 기획팀</div>
+<div class="tc-p">안은비 <span class="lv">L3</span></div>
+<ul class="tc-l">
+<li>브랜딩 프로젝트 기획 및 수행, 대표 업무 수행 보조</li>
+<li>F&amp;B&amp;C 사업 외 콘텐츠 기획 · 제작 · 운영관리</li>
+<li>기업 브랜드 디자인</li>
+<li>기업 내외부 소통 얼라인</li>
+</ul>
+</div>
+<div class="team-card">
+<div class="tc-n">프로젝트 운영팀</div>
+<div class="tc-p">안은비 <span class="lv">L3</span></div>
+<ul class="tc-l">
+<li>브랜드 프로젝트 행사 운영 및 관리</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="dept">
+<div class="dept-head" style="background:var(--org-green)">
+<div class="dh-name">F&amp;B&amp;C 사업부</div>
+<div class="dh-person">윤세현 <span class="lv">L4</span></div>
+<ul class="dh-tasks">
+<li>공간사업팀 업무 총괄</li>
+<li>마케팅팀 운영업무 총괄</li>
+<li>신사업 기획 (서비스 / 제품 / 콘텐츠)</li>
+</ul>
+</div>
+<div class="dept-body">
+<div class="team-card">
+<div class="tc-n">공간사업팀</div>
+<div class="tc-p">권민호 <span class="lv">L3</span></div>
+<ul class="tc-l">
+<li>공간운영 파트 총괄</li>
+<li>C&amp;C 업무 운영관리 (현장)</li>
+<li>공간사업팀 목표 &amp; 인사관리</li>
+</ul>
+<div class="part-list">
+<div class="row"><b>주방 파트</b><span>구채완 <span class="lv">L2</span></span></div>
+<div class="row"><b>홀 &amp; 바 파트</b><span>권민호 <span class="lv">L2</span> <span class="tmp">임시</span></span></div>
+<div class="row"><b>카페 파트</b><span>이문휘 <span class="lv">L2</span></span></div>
+</div>
+</div>
+<div class="team-card">
+<div class="tc-n">마케팅팀</div>
+<div class="tc-p">윤세현 <span class="lv">L3</span></div>
+<ul class="tc-l">
+<li>F&amp;B&amp;C 사업부 마케팅 관리</li>
+<li>C&amp;C 업무 기획 / 운영 / 관리</li>
+<li>브랜드 디자인 (출력물 / 게시물)</li>
+<li>콘텐츠 기획 · 제작 · 운영 관리</li>
+</ul>
 </div>
 </div>
 </div>
@@ -667,86 +756,39 @@ opacity:0;pointer-events:none;transition:opacity .2s;
 <div class="dept">
 <div class="dept-head" style="background:var(--org-orange)">
 <div class="dh-name">경영지원본부</div>
-<div class="dh-person">진수랑</div>
-<div class="dh-en">Corporate Support</div>
-<span class="dh-tag">대표 직속 · 스태프</span>
+<div class="dh-person">진수랑 <span class="lv">L4</span></div>
+<ul class="dh-tasks">
+<li>경영지원업무 총괄</li>
+</ul>
 </div>
 <div class="dept-body">
 <div class="team-card">
 <div class="tc-n">사무국</div>
-<div class="parts"><span class="p-orange">재무 &amp; 세무</span><span class="p-orange">법무</span><span class="p-orange">HRM</span></div>
-</div>
-<div class="team-card"><div class="tc-n">성장추진팀</div></div>
-<div class="team-card"><div class="tc-n">지원사업팀</div></div>
-</div>
-</div>
-
-<div class="dept">
-<div class="dept-head" style="background:var(--org-purple)">
-<div class="dh-name">브랜딩 디렉터</div>
-<div class="dh-person">장서영 (대표 겸임)</div>
-<div class="dh-en">Brand Identity &amp; Creative 총괄</div>
-<span class="dh-tag">크로스펑셔널 · 전사 지원</span>
-</div>
-<div class="dept-body">
-<div class="team-card" style="background:#F7F7FE;border-color:#E3E4F6">
-<div class="tc-n" style="color:#4B50BC">인하우스 팀</div>
-<div class="inhouse-list" style="margin-top:8px">
-<div class="row"><b>브랜드 C&amp;C 관리자</b><span>장서영</span></div>
-<div class="row"><b>브랜드 디자이너</b><span>윤세현</span></div>
-<div class="row"><b>브랜드 마케터</b><span>안은비</span></div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="dept">
-<div class="dept-head" style="background:var(--org-green)">
-<div class="dh-name">오프라인 사업부</div>
-<div class="dh-person">안은비</div>
-<div class="dh-en">오프라인 사업</div>
-</div>
-<div class="dept-body">
-<div class="team-card">
-<div class="tc-n">공간 사업팀</div>
-<div class="parts"><span class="p-green">Cafe &amp; Hall &amp; Bar</span><span class="p-green">Kitchen</span></div>
+<div class="tc-p">진수랑 <span class="lv">L3</span></div>
+<ul class="tc-l">
+<li>경영 관련 행정 업무 총괄 (재무 / HR / 법무 / 세무)</li>
+</ul>
 </div>
 <div class="team-card">
-<div class="tc-n">사업개발 / 기획 / 전략</div>
-<div class="tc-d">오프라인 신규사업 개발 전담</div>
+<div class="tc-n">성장추진팀</div>
+<div class="tc-p">진수랑 <span class="lv">L3</span></div>
+<ul class="tc-l">
+<li>경영 데이터 운영 / IT 제품 개발 / 조직체계 &amp; AI 효율화 설계</li>
+</ul>
 </div>
 <div class="team-card">
-<div class="tc-n">오프라인 콘텐츠팀</div>
-<div class="parts"><span class="p-green">공연 및 행사 콘텐츠 제작</span></div>
-</div>
-</div>
-</div>
-
-<div class="dept">
-<div class="dept-head" style="background:var(--org-blue)">
-<div class="dh-name">온라인 사업부</div>
-<div class="dh-person">윤세현</div>
-<div class="dh-en">E-Commerce &amp; Digital</div>
-</div>
-<div class="dept-body">
-<div class="team-card">
-<div class="tc-n">셀퍼 사업팀</div>
-<div class="parts"><span class="p-blue">브랜드 몰</span></div>
-</div>
-<div class="team-card">
-<div class="tc-n">사업개발 / 기획 / 전략</div>
-<div class="tc-d">온라인 신규사업 개발 전담</div>
-</div>
-<div class="team-card">
-<div class="tc-n">미디어콘텐츠팀</div>
-<div class="parts"><span class="p-blue">사진 &amp; 영상 촬영</span><span class="p-blue">SNS 계정</span></div>
+<div class="tc-n">지원사업팀</div>
+<div class="tc-p">진수랑 <span class="lv">L3</span></div>
+<ul class="tc-l">
+<li>정부지원 사업 / 과제 / 행사 / 투자 등 보조사업 운영</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 
 <div class="org-flow-note">부 (Department) → 팀 (Team) → 파트 (Part)</div>
-<div class="org-cap">2026.08 기준</div>
+<div class="org-cap">2026.09 기준</div>
 
 <div class="org-qr">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAEfElEQVR42u3d3XKjMAyG4Win93/L3oPtZLahrvwHBfLoqENjMC+W+EYWdpQH+87+QAAMMMAAAwwwwAADDDDAMGCAAQaYQ+1jcyTGT1Zez1E/0G5RvcouXTdiuBIwwAADDDAX1jErLUq86JnngSjxKPGffvh3oEXoPE/xeDwam4x0vaqS2i9Y1XMb/RTtmrDan4Fz5JKQwBNjgAEGGGCAuaXAq6Z/crkwoDDqyqI/DRWP8a7PjJjgSmIMAwYYYE4D5ta10/skqj7TUc+81OYNXzZ/jFMvaTeOBvND7uzzP/Eq7OJVAsXEMEx/Gr/kSmIMMAwYYIAh8C4s8FZAjfnnMSPwbp2oIvAEX2CAAQaYt9Ex5UsF05c/+jXIpmkkkqM8Xi7fMXlXtj2OVil0cEVVh9TIm5S0H+1KR0WVGAMMMMAAc3Mwt6yT+dj1fju+BVxxYOWT4krAAAMMMMAAc3qLY6YT8wTNil8YMVwJGGCAAQYYYK5h+yqwjkTVzPpS7bNnm5rx0g6k2uOB6qw/7WL1ehlMFVViDDDAAAPMPWykcCh9C3aUWs0scjAh+fKr7TJigiuJMcAwYIAB5uxgrvNNYHQIvAkxMlJD368FY8GDyWc1uZIYAwwwwAADzOnth01h2hVO+6dm+RRYR93UhATLNZERAwwwwAADDDDAfC8Xzj/zNFJRVdLbLc1ANk1W7gs4sBrDyIgJrsSAAQYYYIA5m45pr9XO65MGFkfaNI3uy5YJyfFeIya4khgDDDDAAPP2YHZNTByc9WhIVFWFXt4kl231XFL7ZsV5jweEJ1cCBhhggAEGmNNbdCzNnRY7dUiOXEjkIqm9dnxgvSsTblwJGGCAAQaYC4Mp7w2mYSayQ3LtIkGr8q0jg9YvxbgSMMAAAwwwwFxZx/TrmryiKhcSHVIjn96b6PKbjxgzkWIMMMAAAwwwp30ZLxF4ExN+9a5GqsVyTZj+ItK6LbsXcyVggAEGmCu8v69TGX5wB+trVDWIkonS7LLHXW1UStrBJZvCXG+AiDHAAAMMMMDcHczpK6r27WDM7E6z8u5iHMjAd4X5XKWZSGAEX2CAAQaY0yudaF9wKtovHONdXPHZ3r4jJrgSAwYYYIAB5j3BxHSLWHnyHoGX67nqt3czqy4MbPJXFnK5dUVVubIriTHAAAMMe3RNuOUH7mRTSxjkv6wqnYnnsdEtE09sn13/VuyvLMYAAwwwwLA1YN5Mx1STKyWqvzx0FfXy0qGSNn1t0fJI6wIvmvNAS7C0J8yiechuvi+M2r2JMYIvMMAAAwwwv2RrlzB45pYWpFvy3YtLqivzs3fMGRoxXAkYYIABBpgbWT1R1aBSqmmffOmjjquV16ZlXqUcM2KWruBQPUepHuBKYgwwwAADDDDXtZ0TVe27/uVCL89LlT000L4jxq5/DBhggAEGmN+x6Ci8rq2kWdrf6A3rIqQSJPpPNqB4OpYwyCuqln6TyJXEGGCAAQYYloJ5892LoxgcXAkYYIABBhhggAEGGGAYMMAAAwwwJ7C/gCoJZn+sVm8AAAAASUVORK5CYII=" alt="팀 조직도 페이지 QR 코드">
